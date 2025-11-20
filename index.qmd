@@ -2,7 +2,13 @@
 title: "Home"
 ---
 
+::: {style="text-align: center; margin-top: 2rem; margin-bottom: 3rem;"}
+![](images/profile.jpg){width=200 style="border-radius: 50%; border: 3px solid #e0e0e0;"}
+:::
+
+::: {style="text-align: center; margin-bottom: 3rem;"}
 # GenAI Architect & Enterprise AI Consultant
+:::
 
 I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.
 
@@ -13,4 +19,6 @@ I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, v
 - Multi-agent orchestration (Autogen, CrewAI)
 - RAG and GraphRAG architectures
 
+::: {style="text-align: center; margin-top: 2rem; font-size: 1.1rem;"}
 [Projects](projects.qmd) • [Contact Me](contact.qmd)
+:::

@@ -42,25 +42,18 @@
     "text": "Contact\nFor consulting, architecture reviews, or collaboration:\n📧 Email: tell2jyoti@gmail.com\n📅 Book a call: (Add Calendly link later)"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I’m Jyoti Ranjan, a GenAI architect specializing in enterprise-grade AI systems, LLM fine-tuning, vLLM inference optimization, and Document AI. I focus on building production systems that are fast, reliable, and scalable.\n\n\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker\n\n\n\n\nPython • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
-  },
-  {
     "objectID": "about.html#core-expertise",
     "href": "about.html#core-expertise",
     "title": "About",
-    "section": "",
-    "text": "LLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker"
+    "section": "Core Expertise",
+    "text": "Core Expertise\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker"
   },
   {
     "objectID": "about.html#tech-stack",
     "href": "about.html#tech-stack",
     "title": "About",
-    "section": "",
-    "text": "Python • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
+    "section": "Tech Stack",
+    "text": "Tech Stack\nPython • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
   },
   {
     "objectID": "blog.html",
@@ -95,13 +88,13 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.\n\n\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\nProjects • Contact Me"
+    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases."
   },
   {
     "objectID": "index.html#what-i-work-on",
     "href": "index.html#what-i-work-on",
     "title": "Home",
-    "section": "",
-    "text": "LLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\nProjects • Contact Me"
+    "section": "What I Work On",
+    "text": "What I Work On\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\n\nProjects • Contact Me"
   }
 ]

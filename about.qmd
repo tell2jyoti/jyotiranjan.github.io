@@ -2,6 +2,10 @@
 title: "About"
 ---
 
+::: {style="text-align: center; margin-top: 2rem; margin-bottom: 3rem;"}
+![](images/profile.jpg){width=180 style="border-radius: 50%; border: 3px solid #e0e0e0;"}
+:::
+
 # About Me
 
 I'm **Jyoti Ranjan**, a GenAI architect specializing in enterprise-grade AI systems, LLM fine-tuning, vLLM inference optimization, and Document AI. I focus on building production systems that are fast, reliable, and scalable.

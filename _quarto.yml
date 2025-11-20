@@ -15,7 +15,19 @@ website:
         text: About
       - href: contact.qmd
         text: Contact
+    right:
+      - icon: github
+        href: https://github.com/jyotiranjan
+      - icon: linkedin
+        href: https://linkedin.com/in/jyotiranjan
+
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
     toc: false
+    css: styles.css
+    mainfont: "system-ui, -apple-system, sans-serif"
+    page-layout: article
+    max-width: 900px
