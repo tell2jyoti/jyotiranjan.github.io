@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below are placeholder projects representing my typical work. Full details coming soon.\n\n\nA scalable RAG pipeline with vLLM-powered inference.\n\n\n\nGraphRAG prototype using Neo4j + LLM retrieval & reasoning.\n\n\n\nOCR + layout-aware Document AI extraction pipeline.\n\n\n\nMulti-agent orchestration using Autogen/CrewAI for structured workflows."
+  },
+  {
+    "objectID": "projects.html#project-atlas",
+    "href": "projects.html#project-atlas",
+    "title": "Projects",
+    "section": "",
+    "text": "A scalable RAG pipeline with vLLM-powered inference."
+  },
+  {
+    "objectID": "projects.html#project-nebula",
+    "href": "projects.html#project-nebula",
+    "title": "Projects",
+    "section": "",
+    "text": "GraphRAG prototype using Neo4j + LLM retrieval & reasoning."
+  },
+  {
+    "objectID": "projects.html#project-helix",
+    "href": "projects.html#project-helix",
+    "title": "Projects",
+    "section": "",
+    "text": "OCR + layout-aware Document AI extraction pipeline."
+  },
+  {
+    "objectID": "projects.html#project-polaris",
+    "href": "projects.html#project-polaris",
+    "title": "Projects",
+    "section": "",
+    "text": "Multi-agent orchestration using Autogen/CrewAI for structured workflows."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Contact\nFor consulting, architecture reviews, or collaboration:\n📧 Email: tell2jyoti@gmail.com\n📅 Book a call: (Add Calendly link later)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m Jyoti Ranjan, a GenAI architect specializing in enterprise-grade AI systems, LLM fine-tuning, vLLM inference optimization, and Document AI. I focus on building production systems that are fast, reliable, and scalable.\n\n\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker\n\n\n\n\nPython • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
+  },
+  {
+    "objectID": "about.html#core-expertise",
+    "href": "about.html#core-expertise",
+    "title": "About",
+    "section": "",
+    "text": "LLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker"
+  },
+  {
+    "objectID": "about.html#tech-stack",
+    "href": "about.html#tech-stack",
+    "title": "About",
+    "section": "",
+    "text": "Python • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Foundational principles for building retrieval-first LLM applications.\n\n\n\nLow-latency inference, batching, quantization, GPU strategies.\n\n\n\nTurning messy documents into usable structured intelligence."
+  },
+  {
+    "objectID": "blog.html#thinking-in-rag-systems",
+    "href": "blog.html#thinking-in-rag-systems",
+    "title": "Blog",
+    "section": "",
+    "text": "Foundational principles for building retrieval-first LLM applications."
+  },
+  {
+    "objectID": "blog.html#vllm-in-production-practical-notes",
+    "href": "blog.html#vllm-in-production-practical-notes",
+    "title": "Blog",
+    "section": "",
+    "text": "Low-latency inference, batching, quantization, GPU strategies."
+  },
+  {
+    "objectID": "blog.html#ocr-llm-pipelines",
+    "href": "blog.html#ocr-llm-pipelines",
+    "title": "Blog",
+    "section": "",
+    "text": "Turning messy documents into usable structured intelligence."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.\n\n\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\nProjects • Contact Me"
+  },
+  {
+    "objectID": "index.html#what-i-work-on",
+    "href": "index.html#what-i-work-on",
+    "title": "Home",
+    "section": "",
+    "text": "LLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\nProjects • Contact Me"
+  }
+]
