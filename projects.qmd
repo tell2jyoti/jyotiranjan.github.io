@@ -1,0 +1,19 @@
+---
+title: "Projects"
+---
+
+# Projects
+
+Below are placeholder projects representing my typical work. Full details coming soon.
+
+## Project Atlas
+A scalable RAG pipeline with vLLM-powered inference.
+
+## Project Nebula
+GraphRAG prototype using Neo4j + LLM retrieval & reasoning.
+
+## Project Helix
+OCR + layout-aware Document AI extraction pipeline.
+
+## Project Polaris
+Multi-agent orchestration using Autogen/CrewAI for structured workflows.

@@ -1,0 +1,16 @@
+---
+title: "Home"
+---
+
+# GenAI Architect & Enterprise AI Consultant
+
+I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.
+
+## What I Work On
+- LLM fine-tuning (SFT, RLHF, DPO)
+- vLLM inference optimization (batching, quantization, GPU-efficient serving)
+- OCR + Document AI (Donut, TrOCR, layout models)
+- Multi-agent orchestration (Autogen, CrewAI)
+- RAG and GraphRAG architectures
+
+[Projects](projects.qmd) • [Contact Me](contact.qmd)
