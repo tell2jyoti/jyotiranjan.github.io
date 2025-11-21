@@ -35,11 +35,25 @@
     "text": "Multi-agent orchestration using Autogen/CrewAI for structured workflows."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "Contact\nFor consulting, architecture reviews, or collaboration:\n📧 Email: tell2jyoti@gmail.com\n📅 Book a call: (Add Calendly link later)"
+    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases."
+  },
+  {
+    "objectID": "index.html#what-i-work-on",
+    "href": "index.html#what-i-work-on",
+    "title": "Home",
+    "section": "What I Work On",
+    "text": "What I Work On\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\n\nProjects • Contact Me"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2\n\n\n\nLLM\n\nDeep Learning\n\nGPT-2\n\nTransformers\n\n\n\nA comprehensive breakdown of how to calculate the total number of parameters in GPT-2, from input embeddings to output predictions.\n\n\n\n\n\nNov 21, 2024\n\n\nJyoti Ranjan\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html#core-expertise",
@@ -56,45 +70,87 @@
     "text": "Tech Stack\nPython • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Foundational principles for building retrieval-first LLM applications.\n\n\n\nLow-latency inference, batching, quantization, GPU strategies.\n\n\n\nTurning messy documents into usable structured intelligence."
+    "text": "Contact\nFor consulting, architecture reviews, or collaboration:\n📧 Email: tell2jyoti@gmail.com\n📅 Book a call: (Add Calendly link later)"
   },
   {
-    "objectID": "blog.html#thinking-in-rag-systems",
-    "href": "blog.html#thinking-in-rag-systems",
-    "title": "Blog",
+    "objectID": "posts/gpt2-parameters/index.html",
+    "href": "posts/gpt2-parameters/index.html",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
     "section": "",
-    "text": "Foundational principles for building retrieval-first LLM applications."
+    "text": "Ever wondered where the “117M” in GPT-2 small or “1.5B” in GPT-2 XL comes from? In this post, we’ll break down exactly how to calculate the total number of parameters in a GPT-2 model from scratch. We’ll trace every single parameter from the input token all the way to the output prediction.\nBut here’s what makes this interesting: each of these millions of parameters starts as a random number. When we create a GPT-2 model from scratch, we’re essentially creating millions of random values that will gradually learn to understand and generate human language through training. Think of it as sculpting intelligence from random noise."
   },
   {
-    "objectID": "blog.html#vllm-in-production-practical-notes",
-    "href": "blog.html#vllm-in-production-practical-notes",
-    "title": "Blog",
+    "objectID": "posts/gpt2-parameters/index.html#introduction",
+    "href": "posts/gpt2-parameters/index.html#introduction",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
     "section": "",
-    "text": "Low-latency inference, batching, quantization, GPU strategies."
+    "text": "Ever wondered where the “117M” in GPT-2 small or “1.5B” in GPT-2 XL comes from? In this post, we’ll break down exactly how to calculate the total number of parameters in a GPT-2 model from scratch. We’ll trace every single parameter from the input token all the way to the output prediction.\nBut here’s what makes this interesting: each of these millions of parameters starts as a random number. When we create a GPT-2 model from scratch, we’re essentially creating millions of random values that will gradually learn to understand and generate human language through training. Think of it as sculpting intelligence from random noise."
   },
   {
-    "objectID": "blog.html#ocr-llm-pipelines",
-    "href": "blog.html#ocr-llm-pipelines",
-    "title": "Blog",
-    "section": "",
-    "text": "Turning messy documents into usable structured intelligence."
+    "objectID": "posts/gpt2-parameters/index.html#why-parameters-matter",
+    "href": "posts/gpt2-parameters/index.html#why-parameters-matter",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Why Parameters Matter",
+    "text": "Why Parameters Matter\nBefore diving into calculations, let’s understand what these parameters actually do:\n\nParameters are the model’s memory - They store everything the model knows about language\nEach parameter is a decimal number - Initially random (like 0.0234 or -0.1823)\nTraining adjusts these numbers - Billions of text examples gradually tune each parameter\nMore parameters = more capacity - Like having more neurons in a brain\n\nTo make this crystal clear, we’ll use concrete numbers and track parameters through three distinct stages:\n\nInput Processing (Token Embedding + Position Encoding) - Where words become numbers\nTransformer Blocks (Multi-Head Attention) - Where understanding happens\nOutput Generation (Feed-Forward Networks + Final Projection) - Where predictions emerge"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases."
+    "objectID": "posts/gpt2-parameters/index.html#model-configuration",
+    "href": "posts/gpt2-parameters/index.html#model-configuration",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Model Configuration",
+    "text": "Model Configuration\nLet’s start with GPT-2 small (117M) configuration:\n\n\n\nParameter\nValue\n\n\n\n\nVocabulary size (V)\n50,257\n\n\nModel dimension (d_model)\n768\n\n\nNumber of layers\n12\n\n\nNumber of attention heads\n12\n\n\nFeed-forward dimension\n3,072\n\n\nMax sequence length\n1,024"
   },
   {
-    "objectID": "index.html#what-i-work-on",
-    "href": "index.html#what-i-work-on",
-    "title": "Home",
-    "section": "What I Work On",
-    "text": "What I Work On\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\n\nProjects • Contact Me"
+    "objectID": "posts/gpt2-parameters/index.html#part-1-input-processing",
+    "href": "posts/gpt2-parameters/index.html#part-1-input-processing",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Part 1: Input Processing",
+    "text": "Part 1: Input Processing\nBefore any learning happens, we need to convert text into numbers that neural networks can process. This is where embedding matrices come in - they’re like dictionaries that translate words into numerical representations.\n\n1.1 Token Embedding Matrix: The Model’s Vocabulary\nWhen a token enters the model, it’s converted to a dense vector representation. Think of this as the model’s learned dictionary.\nWhat’s really happening here:\n\nEach of the 50,257 tokens gets its own 768-dimensional vector\nInitially, these vectors are randomly initialized (values between -0.02 and 0.02)\nDuring training, similar words gradually develop similar vectors\nWords like “cat” and “kitten” end up with vectors pointing in similar directions\n\n\n\n\nFigure 1: How tokens are converted to vectors and how similar words cluster together in the learned embedding space after training.\n\n\nMatrix Shape: [V × d_model] = [50,257 × 768] Parameters: 50,257 × 768 = 38,597,376\nTraining Evolution: These 38.6 million parameters start random but gradually organize into a meaningful semantic space where related concepts cluster together.\n\n\n1.2 Position Embedding Matrix: Teaching Word Order\nEach position in the sequence gets its own learned embedding. This is crucial because transformers, unlike RNNs, don’t inherently understand sequence order.\nWhy position matters:\n\nWithout position embeddings, “The cat ate the mouse” = “The mouse ate the cat”\nPosition 0 learns about sentence starters (capitals, common opening words)\nLater positions learn about sentence endings (punctuation patterns)\n\nMatrix Shape: [max_seq_length × d_model] = [1,024 × 768] Parameters: 1,024 × 768 = 786,432\n\n\nTotal for Part 1\n\nToken Embeddings: 38,597,376\nPosition Embeddings: 786,432\nSubtotal: 39,383,808 parameters"
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#part-2-transformer-blocks-multi-head-attention",
+    "href": "posts/gpt2-parameters/index.html#part-2-transformer-blocks-multi-head-attention",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Part 2: Transformer Blocks (Multi-Head Attention)",
+    "text": "Part 2: Transformer Blocks (Multi-Head Attention)\nThis is where the magic happens. Each transformer block learns to understand relationships between words, build up meaning, and extract patterns. Think of each layer as adding a deeper level of understanding - early layers might learn grammar, while later layers learn semantics and reasoning.\n\n2.1 Multi-Head Attention Block: The Heart of Understanding\nThe attention mechanism is what allows GPT-2 to understand context and relationships between words. It’s called “attention” because it learns which words to “pay attention to” when understanding each word.\n\n\n\nFigure 2: How different attention heads specialize in different patterns - grammar, pronouns, and long-range dependencies.\n\n\n\n\nQuery, Key, Value Projections: The Attention Trinity\nThink of attention like a library search system:\n\nQuery (Q): “What am I looking for?” - Each word asks questions\nKey (K): “What can I offer?” - Each word advertises what it contains\nValue (V): “Here’s my actual information” - The content to be retrieved\n\nFor each projection (Q, K, V):\n\nWeight matrix: [768 × 768] = 589,824\nBias vector: [768]\n\nPer projection: 589,824 + 768 = 590,592 For all three (Q, K, V): 590,592 × 3 = 1,771,776\nDuring Training: These matrices learn to extract different types of relationships - some heads learn syntax, others semantics, some long-range dependencies, others local patterns.\n\n\nOutput Projection\nAfter concatenating all attention heads, we project back to d_model dimension. This learned projection decides how to best combine the different patterns each head discovered.\nOutput projection total: 590,592\n\n\nLayer Normalization\nLayer normalization prevents values from exploding or vanishing during training. Without it, deep networks become impossible to train.\nLayerNorm parameters: 1,536"
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#part-3-feed-forward-network-and-output-generation",
+    "href": "posts/gpt2-parameters/index.html#part-3-feed-forward-network-and-output-generation",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Part 3: Feed-Forward Network and Output Generation",
+    "text": "Part 3: Feed-Forward Network and Output Generation\nAfter attention figures out “what to look at,” the feed-forward network processes this information, acting like the “thinking” step that happens after gathering context.\n\n3.1 Feed-Forward Network: The “Thinking” Layer\nWhile attention gathers information, the FFN processes it. Think of it as the model’s “reasoning engine” that transforms the gathered context into higher-level understanding.\n\nFirst Linear Layer: Expansion for Processing Power\nThe network expands from 768 to 3,072 dimensions - giving it more “room to think.” This 4x expansion is crucial for learning complex patterns.\nFirst layer total: 2,362,368 parameters\nDuring Training: These 2.36M parameters learn to detect complex patterns - combinations of features that represent higher-level concepts.\n\n\nSecond Linear Layer: Distilling Understanding\nProjects back from the expanded space to the model dimension, distilling the processed information while preserving the most important insights.\nSecond layer total: 2,360,064 parameters\n\n\n\nBuilding Understanding Layer by Layer\nEach layer adds depth to the model’s understanding:\n\nLayers 1-3: Often learn basic syntax and grammar\nLayers 4-6: Typically capture phrase-level patterns and simple semantics\nLayers 7-9: Usually understand sentence structure and dependencies\nLayers 10-12: Generally handle abstract reasoning and long-range relationships\n\nAll 12 Transformer Layers: 7,087,872 × 12 = 85,054,464 parameters"
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#final-parameter-count",
+    "href": "posts/gpt2-parameters/index.html#final-parameter-count",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Final Parameter Count",
+    "text": "Final Parameter Count\n\n\n\nComponent\nParameters\n\n\n\n\nToken Embeddings\n38,597,376\n\n\nPosition Embeddings\n786,432\n\n\nTransformer Blocks (×12)\n85,054,464\n\n\nFinal LayerNorm\n1,536\n\n\nTotal\n124,439,808\n\n\n\n\n\n\nFigure 3: The complete information flow through GPT-2, showing how 124M parameters transform tokens into predictions."
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#practical-insights",
+    "href": "posts/gpt2-parameters/index.html#practical-insights",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Practical Insights",
+    "text": "Practical Insights\n\nHow Parameters Evolve During Training\n\nInitialization (Before Training):\n\nAll 124M parameters start as small random numbers\nThe model outputs complete gibberish\n\nEarly Training (First few thousand steps):\n\nModel learns basic patterns: common words, simple grammar\nAttention heads start specializing\n\nMid Training (Millions of tokens):\n\nComplex patterns emerge: subject-verb agreement, pronouns\nDifferent layers develop distinct roles\n\nLate Training (Billions of tokens):\n\nFine-grained understanding: idioms, context, style\nModel can generate fluent, contextual text\n\n\n\n\nMemory Requirements\nEach parameter needs storage:\n\nFloat32: ~124M × 4 bytes = ~496 MB (Full precision)\nFloat16: ~124M × 2 bytes = ~248 MB (Half precision)\nTraining requires ~10-15 GB total (including gradients, optimizer states)\n\n\n\nScaling Laws\n\n\n\nModel\nParameters\nPerformance\n\n\n\n\nGPT-2 Small\n117M\nGood\n\n\nGPT-2 Medium\n345M\nBetter\n\n\nGPT-2 Large\n762M\nEven Better\n\n\nGPT-2 XL\n1.5B\nBest\n\n\n\nWhy Bigger Models Work Better:\n\nMore parameters = More patterns to learn\nDeeper layers = More abstraction levels\nWider layers = Richer representations"
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#conclusion-from-random-numbers-to-language-understanding",
+    "href": "posts/gpt2-parameters/index.html#conclusion-from-random-numbers-to-language-understanding",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Conclusion: From Random Numbers to Language Understanding",
+    "text": "Conclusion: From Random Numbers to Language Understanding\nWe’ve traced every single parameter in GPT-2, from the 38.6M embedding parameters to the 85M transformer parameters. But here’s the remarkable part: all 124 million parameters start as random numbers. Through training on billions of tokens of text, these random values self-organize into a system that understands and generates human language.\nUnderstanding parameter calculation helps us:\n\nEstimate memory requirements\nDesign efficient architectures\nUnderstand computational costs\nMake informed scaling decisions\n\nEvery parameter serves a specific purpose in transforming input tokens into predicted output distributions.\nThe Beautiful Symmetry: Notice how the same embedding matrix that encodes input tokens also decodes output predictions. The attention mechanisms that understand relationships also help generate coherent text. The model is both a reader and a writer, using the same parameters for both tasks."
+  },
+  {
+    "objectID": "posts/gpt2-parameters/index.html#next-steps",
+    "href": "posts/gpt2-parameters/index.html#next-steps",
+    "title": "Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2",
+    "section": "Next Steps",
+    "text": "Next Steps\nTry calculating parameters for:\n\nBERT (encoder-only, different architecture)\nGPT-3 (175B parameters - where do they all go?)\nModern models like Llama or Mistral (architectural innovations)\n\nRemember: The power of these models comes not just from parameter count, but from how these parameters are organized and trained. Architecture matters as much as scale!"
   }
 ]

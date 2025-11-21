@@ -1,14 +1,11 @@
 ---
 title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
 ---
-
-# Blog
-
-## Thinking in RAG Systems
-Foundational principles for building retrieval-first LLM applications.
-
-## VLLM in Production: Practical Notes
-Low-latency inference, batching, quantization, GPU strategies.
-
-## OCR → LLM Pipelines
-Turning messy documents into usable structured intelligence.

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jyoti Ranjan">
+<meta name="dcterms.date" content="2024-11-21">
+<meta name="description" content="A comprehensive breakdown of how to calculate the total number of parameters in GPT-2, from input embeddings to output predictions.">
 
-<title>Blog – Jyoti Ranjan</title>
+<title>Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2 – Jyoti Ranjan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +26,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-477e3fab985243e91eed1b75c4fee716.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-1efdeb319db85a2f6c807bb5c41be78e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-477e3fab985243e91eed1b75c4fee716.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-477e3fab985243e91eed1b75c4fee716.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1efdeb319db85a2f6c807bb5c41be78e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-477e3fab985243e91eed1b75c4fee716.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,70 +75,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -306,7 +249,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jyoti Ranjan</span>
     </a>
   </div>
@@ -317,23 +260,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -357,25 +300,47 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGVlcCUyMExlYXJuaW5n">Deep Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R1BULTI=">GPT-2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExN">LLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhbnNmb3JtZXJz">Transformers <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">LLM</div>
+    <div class="quarto-category">Deep Learning</div>
+    <div class="quarto-category">GPT-2</div>
+    <div class="quarto-category">Transformers</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A comprehensive breakdown of how to calculate the total number of parameters in GPT-2, from input embeddings to output predictions.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jyoti Ranjan </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 21, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -385,51 +350,320 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNJTJDRGVlcCUyMExlYXJuaW5nJTJDR1BULTIlMkNUcmFuc2Zvcm1lcnM=" data-listing-date-sort="1732127400000" data-listing-file-modified-sort="1763705670385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1382">
-<div class="thumbnail"><a href="./posts/gpt2-parameters/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/gpt2-parameters/images/architecture_flow_enhanced.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/gpt2-parameters/index.html" class="no-external">Understanding LLM Parameters: A Step-by-Step Calculation Guide Using GPT-2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExN'); return false;">LLM</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMExlYXJuaW5n'); return false;">Deep Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R1BULTI='); return false;">GPT-2</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHJhbnNmb3JtZXJz'); return false;">Transformers</div>
-
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Ever wondered where the “117M” in GPT-2 small or “1.5B” in GPT-2 XL comes from? In this post, we’ll break down exactly how to calculate the total number of parameters in a GPT-2 model from scratch. We’ll trace every single parameter from the input token all the way to the output prediction.</p>
+<p>But here’s what makes this interesting: each of these millions of parameters starts as a random number. When we create a GPT-2 model from scratch, we’re essentially creating millions of random values that will gradually learn to understand and generate human language through training. Think of it as sculpting intelligence from random noise.</p>
+</section>
+<section id="why-parameters-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-parameters-matter">Why Parameters Matter</h2>
+<p>Before diving into calculations, let’s understand what these parameters actually do:</p>
+<ul>
+<li><strong>Parameters are the model’s memory</strong> - They store everything the model knows about language</li>
+<li><strong>Each parameter is a decimal number</strong> - Initially random (like 0.0234 or -0.1823)</li>
+<li><strong>Training adjusts these numbers</strong> - Billions of text examples gradually tune each parameter</li>
+<li><strong>More parameters = more capacity</strong> - Like having more neurons in a brain</li>
+</ul>
+<p>To make this crystal clear, we’ll use concrete numbers and track parameters through three distinct stages:</p>
+<ol type="1">
+<li><strong>Input Processing</strong> (Token Embedding + Position Encoding) - Where words become numbers</li>
+<li><strong>Transformer Blocks</strong> (Multi-Head Attention) - Where understanding happens</li>
+<li><strong>Output Generation</strong> (Feed-Forward Networks + Final Projection) - Where predictions emerge</li>
+</ol>
+</section>
+<section id="model-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="model-configuration">Model Configuration</h2>
+<p>Let’s start with GPT-2 small (117M) configuration:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vocabulary size (V)</td>
+<td>50,257</td>
+</tr>
+<tr class="even">
+<td>Model dimension (d_model)</td>
+<td>768</td>
+</tr>
+<tr class="odd">
+<td>Number of layers</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Number of attention heads</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>Feed-forward dimension</td>
+<td>3,072</td>
+</tr>
+<tr class="even">
+<td>Max sequence length</td>
+<td>1,024</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="part-1-input-processing" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-input-processing">Part 1: Input Processing</h2>
+<p>Before any learning happens, we need to convert text into numbers that neural networks can process. This is where embedding matrices come in - they’re like dictionaries that translate words into numerical representations.</p>
+<section id="token-embedding-matrix-the-models-vocabulary" class="level3">
+<h3 class="anchored" data-anchor-id="token-embedding-matrix-the-models-vocabulary">1.1 Token Embedding Matrix: The Model’s Vocabulary</h3>
+<p>When a token enters the model, it’s converted to a dense vector representation. Think of this as the model’s learned dictionary.</p>
+<p><strong>What’s really happening here:</strong></p>
+<ul>
+<li>Each of the 50,257 tokens gets its own 768-dimensional vector</li>
+<li>Initially, these vectors are randomly initialized (values between -0.02 and 0.02)</li>
+<li>During training, similar words gradually develop similar vectors</li>
+<li>Words like “cat” and “kitten” end up with vectors pointing in similar directions</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/embedding_visualization_enhanced.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: How tokens are converted to vectors and how similar words cluster together in the learned embedding space after training.</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/gpt2-parameters/index.html" class="no-external">
-<p>A comprehensive breakdown of how to calculate the total number of parameters in GPT-2, from input embeddings to output predictions.</p>
-</a></div>
+<p><strong>Matrix Shape:</strong> <code>[V × d_model] = [50,257 × 768]</code> <strong>Parameters:</strong> <code>50,257 × 768 = 38,597,376</code></p>
+<p><strong>Training Evolution:</strong> These 38.6 million parameters start random but gradually organize into a meaningful semantic space where related concepts cluster together.</p>
+</section>
+<section id="position-embedding-matrix-teaching-word-order" class="level3">
+<h3 class="anchored" data-anchor-id="position-embedding-matrix-teaching-word-order">1.2 Position Embedding Matrix: Teaching Word Order</h3>
+<p>Each position in the sequence gets its own learned embedding. This is crucial because transformers, unlike RNNs, don’t inherently understand sequence order.</p>
+<p><strong>Why position matters:</strong></p>
+<ul>
+<li>Without position embeddings, “The cat ate the mouse” = “The mouse ate the cat”</li>
+<li>Position 0 learns about sentence starters (capitals, common opening words)</li>
+<li>Later positions learn about sentence endings (punctuation patterns)</li>
+</ul>
+<p><strong>Matrix Shape:</strong> <code>[max_seq_length × d_model] = [1,024 × 768]</code> <strong>Parameters:</strong> <code>1,024 × 768 = 786,432</code></p>
+</section>
+<section id="total-for-part-1" class="level3">
+<h3 class="anchored" data-anchor-id="total-for-part-1">Total for Part 1</h3>
+<ul>
+<li>Token Embeddings: <strong>38,597,376</strong></li>
+<li>Position Embeddings: <strong>786,432</strong></li>
+<li><strong>Subtotal: 39,383,808 parameters</strong></li>
+</ul>
+</section>
+</section>
+<section id="part-2-transformer-blocks-multi-head-attention" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-transformer-blocks-multi-head-attention">Part 2: Transformer Blocks (Multi-Head Attention)</h2>
+<p>This is where the magic happens. Each transformer block learns to understand relationships between words, build up meaning, and extract patterns. Think of each layer as adding a deeper level of understanding - early layers might learn grammar, while later layers learn semantics and reasoning.</p>
+<section id="multi-head-attention-block-the-heart-of-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="multi-head-attention-block-the-heart-of-understanding">2.1 Multi-Head Attention Block: The Heart of Understanding</h3>
+<p>The attention mechanism is what allows GPT-2 to understand context and relationships between words. It’s called “attention” because it learns which words to “pay attention to” when understanding each word.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/attention_visualization_enhanced.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: How different attention heads specialize in different patterns - grammar, pronouns, and long-range dependencies.</figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="./posts/gpt2-parameters/index.html" class="no-external">
-<div class="listing-date">
-Nov 21, 2024
+</section>
+<section id="query-key-value-projections-the-attention-trinity" class="level3">
+<h3 class="anchored" data-anchor-id="query-key-value-projections-the-attention-trinity">Query, Key, Value Projections: The Attention Trinity</h3>
+<p>Think of attention like a library search system:</p>
+<ul>
+<li><strong>Query (Q):</strong> “What am I looking for?” - Each word asks questions</li>
+<li><strong>Key (K):</strong> “What can I offer?” - Each word advertises what it contains</li>
+<li><strong>Value (V):</strong> “Here’s my actual information” - The content to be retrieved</li>
+</ul>
+<p>For each projection (Q, K, V):</p>
+<ul>
+<li>Weight matrix: <code>[768 × 768] = 589,824</code></li>
+<li>Bias vector: <code>[768]</code></li>
+</ul>
+<p><strong>Per projection:</strong> <code>589,824 + 768 = 590,592</code> <strong>For all three (Q, K, V):</strong> <code>590,592 × 3 = 1,771,776</code></p>
+<p><strong>During Training:</strong> These matrices learn to extract different types of relationships - some heads learn syntax, others semantics, some long-range dependencies, others local patterns.</p>
+</section>
+<section id="output-projection" class="level3">
+<h3 class="anchored" data-anchor-id="output-projection">Output Projection</h3>
+<p>After concatenating all attention heads, we project back to d_model dimension. This learned projection decides how to best combine the different patterns each head discovered.</p>
+<p><strong>Output projection total:</strong> <code>590,592</code></p>
+</section>
+<section id="layer-normalization" class="level3">
+<h3 class="anchored" data-anchor-id="layer-normalization">Layer Normalization</h3>
+<p>Layer normalization prevents values from exploding or vanishing during training. Without it, deep networks become impossible to train.</p>
+<p><strong>LayerNorm parameters:</strong> <code>1,536</code></p>
+</section>
+</section>
+<section id="part-3-feed-forward-network-and-output-generation" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-feed-forward-network-and-output-generation">Part 3: Feed-Forward Network and Output Generation</h2>
+<p>After attention figures out “what to look at,” the feed-forward network processes this information, acting like the “thinking” step that happens after gathering context.</p>
+<section id="feed-forward-network-the-thinking-layer" class="level3">
+<h3 class="anchored" data-anchor-id="feed-forward-network-the-thinking-layer">3.1 Feed-Forward Network: The “Thinking” Layer</h3>
+<p>While attention gathers information, the FFN processes it. Think of it as the model’s “reasoning engine” that transforms the gathered context into higher-level understanding.</p>
+<section id="first-linear-layer-expansion-for-processing-power" class="level4">
+<h4 class="anchored" data-anchor-id="first-linear-layer-expansion-for-processing-power">First Linear Layer: Expansion for Processing Power</h4>
+<p>The network expands from 768 to 3,072 dimensions - giving it more “room to think.” This 4x expansion is crucial for learning complex patterns.</p>
+<p><strong>First layer total:</strong> <code>2,362,368 parameters</code></p>
+<p><strong>During Training:</strong> These 2.36M parameters learn to detect complex patterns - combinations of features that represent higher-level concepts.</p>
+</section>
+<section id="second-linear-layer-distilling-understanding" class="level4">
+<h4 class="anchored" data-anchor-id="second-linear-layer-distilling-understanding">Second Linear Layer: Distilling Understanding</h4>
+<p>Projects back from the expanded space to the model dimension, distilling the processed information while preserving the most important insights.</p>
+<p><strong>Second layer total:</strong> <code>2,360,064 parameters</code></p>
+</section>
+</section>
+<section id="building-understanding-layer-by-layer" class="level3">
+<h3 class="anchored" data-anchor-id="building-understanding-layer-by-layer">Building Understanding Layer by Layer</h3>
+<p>Each layer adds depth to the model’s understanding:</p>
+<ul>
+<li><strong>Layers 1-3:</strong> Often learn basic syntax and grammar</li>
+<li><strong>Layers 4-6:</strong> Typically capture phrase-level patterns and simple semantics</li>
+<li><strong>Layers 7-9:</strong> Usually understand sentence structure and dependencies</li>
+<li><strong>Layers 10-12:</strong> Generally handle abstract reasoning and long-range relationships</li>
+</ul>
+<p><strong>All 12 Transformer Layers:</strong> <code>7,087,872 × 12 = 85,054,464 parameters</code></p>
+</section>
+</section>
+<section id="final-parameter-count" class="level2">
+<h2 class="anchored" data-anchor-id="final-parameter-count">Final Parameter Count</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Token Embeddings</td>
+<td>38,597,376</td>
+</tr>
+<tr class="even">
+<td>Position Embeddings</td>
+<td>786,432</td>
+</tr>
+<tr class="odd">
+<td><strong>Transformer Blocks (×12)</strong></td>
+<td><strong>85,054,464</strong></td>
+</tr>
+<tr class="even">
+<td>Final LayerNorm</td>
+<td>1,536</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>124,439,808</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/architecture_flow_enhanced.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: The complete information flow through GPT-2, showing how 124M parameters transform tokens into predictions.</figcaption>
+</figure>
 </div>
-<div class="listing-author">
-Jyoti Ranjan
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</section>
+<section id="practical-insights" class="level2">
+<h2 class="anchored" data-anchor-id="practical-insights">Practical Insights</h2>
+<section id="how-parameters-evolve-during-training" class="level3">
+<h3 class="anchored" data-anchor-id="how-parameters-evolve-during-training">How Parameters Evolve During Training</h3>
+<ol type="1">
+<li><strong>Initialization (Before Training):</strong>
+<ul>
+<li>All 124M parameters start as small random numbers</li>
+<li>The model outputs complete gibberish</li>
+</ul></li>
+<li><strong>Early Training (First few thousand steps):</strong>
+<ul>
+<li>Model learns basic patterns: common words, simple grammar</li>
+<li>Attention heads start specializing</li>
+</ul></li>
+<li><strong>Mid Training (Millions of tokens):</strong>
+<ul>
+<li>Complex patterns emerge: subject-verb agreement, pronouns</li>
+<li>Different layers develop distinct roles</li>
+</ul></li>
+<li><strong>Late Training (Billions of tokens):</strong>
+<ul>
+<li>Fine-grained understanding: idioms, context, style</li>
+<li>Model can generate fluent, contextual text</li>
+</ul></li>
+</ol>
+</section>
+<section id="memory-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="memory-requirements">Memory Requirements</h3>
+<p>Each parameter needs storage:</p>
+<ul>
+<li><strong>Float32:</strong> ~124M × 4 bytes = ~496 MB (Full precision)</li>
+<li><strong>Float16:</strong> ~124M × 2 bytes = ~248 MB (Half precision)</li>
+<li><strong>Training</strong> requires ~10-15 GB total (including gradients, optimizer states)</li>
+</ul>
+</section>
+<section id="scaling-laws" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-laws">Scaling Laws</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Parameters</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-2 Small</td>
+<td>117M</td>
+<td>Good</td>
+</tr>
+<tr class="even">
+<td>GPT-2 Medium</td>
+<td>345M</td>
+<td>Better</td>
+</tr>
+<tr class="odd">
+<td>GPT-2 Large</td>
+<td>762M</td>
+<td>Even Better</td>
+</tr>
+<tr class="even">
+<td>GPT-2 XL</td>
+<td>1.5B</td>
+<td>Best</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why Bigger Models Work Better:</strong></p>
+<ul>
+<li>More parameters = More patterns to learn</li>
+<li>Deeper layers = More abstraction levels</li>
+<li>Wider layers = Richer representations</li>
+</ul>
+</section>
+</section>
+<section id="conclusion-from-random-numbers-to-language-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-from-random-numbers-to-language-understanding">Conclusion: From Random Numbers to Language Understanding</h2>
+<p>We’ve traced every single parameter in GPT-2, from the 38.6M embedding parameters to the 85M transformer parameters. But here’s the remarkable part: all 124 million parameters start as random numbers. Through training on billions of tokens of text, these random values self-organize into a system that understands and generates human language.</p>
+<p>Understanding parameter calculation helps us:</p>
+<ul>
+<li>Estimate memory requirements</li>
+<li>Design efficient architectures</li>
+<li>Understand computational costs</li>
+<li>Make informed scaling decisions</li>
+</ul>
+<p>Every parameter serves a specific purpose in transforming input tokens into predicted output distributions.</p>
+<p><strong>The Beautiful Symmetry:</strong> Notice how the same embedding matrix that encodes input tokens also decodes output predictions. The attention mechanisms that understand relationships also help generate coherent text. The model is both a reader and a writer, using the same parameters for both tasks.</p>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Try calculating parameters for:</p>
+<ul>
+<li><strong>BERT</strong> (encoder-only, different architecture)</li>
+<li><strong>GPT-3</strong> (175B parameters - where do they all go?)</li>
+<li><strong>Modern models</strong> like Llama or Mistral (architectural innovations)</li>
+</ul>
+<p>Remember: The power of these models comes not just from parameter count, but from how these parameters are organized and trained. Architecture matters as much as scale!</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
