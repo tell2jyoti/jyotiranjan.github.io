@@ -37,16 +37,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home",
+    "title": "Jyoti Ranjan",
     "section": "",
-    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases."
+    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.\nFocus areas: LLM fine-tuning • vLLM inference • Document AI • Multi-agent systems • RAG/GraphRAG\nAbout • Projects • Contact"
   },
   {
-    "objectID": "index.html#what-i-work-on",
-    "href": "index.html#what-i-work-on",
-    "title": "Home",
-    "section": "What I Work On",
-    "text": "What I Work On\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference optimization (batching, quantization, GPU-efficient serving)\nOCR + Document AI (Donut, TrOCR, layout models)\nMulti-agent orchestration (Autogen, CrewAI)\nRAG and GraphRAG architectures\n\n\nProjects • Contact Me"
+    "objectID": "index.html#genai-architect-enterprise-ai-consultant",
+    "href": "index.html#genai-architect-enterprise-ai-consultant",
+    "title": "Jyoti Ranjan",
+    "section": "",
+    "text": "I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.\nFocus areas: LLM fine-tuning • vLLM inference • Document AI • Multi-agent systems • RAG/GraphRAG\nAbout • Projects • Contact"
   },
   {
     "objectID": "blog.html",
@@ -60,21 +60,21 @@
     "href": "about.html#core-expertise",
     "title": "About",
     "section": "Core Expertise",
-    "text": "Core Expertise\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems\nRAG + GraphRAG systems\nAzure OpenAI, AWS Bedrock/SageMaker"
+    "text": "Core Expertise\n\nLLM fine-tuning (SFT, RLHF, DPO)\nvLLM inference engineering\nOCR + Document AI (Donut, TrOCR)\nMulti-agent systems (Autogen, CrewAI)\nRAG + GraphRAG architectures\nAzure OpenAI, AWS Bedrock/SageMaker"
   },
   {
     "objectID": "about.html#tech-stack",
     "href": "about.html#tech-stack",
     "title": "About",
     "section": "Tech Stack",
-    "text": "Tech Stack\nPython • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS"
+    "text": "Tech Stack\nAI/ML Frameworks: PyTorch • TensorFlow • Deep Learning • NLP • Computer Vision\nGenAI & LLMs: LangChain • RAG • GraphRAG • LLM Fine-tuning • RLHF/DPO • vLLM • Azure OpenAI • AWS Bedrock\nDocument AI: Donut • TrOCR • OCR Pipelines\nMulti-Agent: Autogen • CrewAI • Agentic Frameworks\nBig Data: Hadoop • Spark • Kafka • HBase • ELK Stack\nDatabases: Neo4j • Vector DBs\nCloud & DevOps: Azure • AWS • Docker • Kubernetes • MLFlow\nProgramming: Python • C/C++ • Linux System Programming"
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Contact\nFor consulting, architecture reviews, or collaboration:\n📧 Email: tell2jyoti@gmail.com\n📅 Book a call: (Add Calendly link later)"
+    "text": "Contact\nFor consulting, architecture reviews, or collaboration:\nEmail: tell2jyoti@gmail.com\nLinkedIn: linkedin.com/in/jyoti-ranjan-panda-0667645\nGitHub: github.com/tell2jyoti\nFeel free to reach out for GenAI consulting, technical discussions, or speaking opportunities."
   },
   {
     "objectID": "posts/gpt2-parameters/index.html",

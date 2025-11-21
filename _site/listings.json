@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/posts/gpt2-parameters/index.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/gpt2-parameters/index.html"

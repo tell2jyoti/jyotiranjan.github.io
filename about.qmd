@@ -14,9 +14,24 @@ I'm **Jyoti Ranjan**, a GenAI architect specializing in enterprise-grade AI syst
 - LLM fine-tuning (SFT, RLHF, DPO)
 - vLLM inference engineering
 - OCR + Document AI (Donut, TrOCR)
-- Multi-agent systems
-- RAG + GraphRAG systems
+- Multi-agent systems (Autogen, CrewAI)
+- RAG + GraphRAG architectures
 - Azure OpenAI, AWS Bedrock/SageMaker
 
 ## Tech Stack
-Python • PyTorch • vLLM • Donut • TrOCR • LangChain • Neo4j • Kubernetes • Azure • AWS
+
+**AI/ML Frameworks:** PyTorch • TensorFlow • Deep Learning • NLP • Computer Vision
+
+**GenAI & LLMs:** LangChain • RAG • GraphRAG • LLM Fine-tuning • RLHF/DPO • vLLM • Azure OpenAI • AWS Bedrock
+
+**Document AI:** Donut • TrOCR • OCR Pipelines
+
+**Multi-Agent:** Autogen • CrewAI • Agentic Frameworks
+
+**Big Data:** Hadoop • Spark • Kafka • HBase • ELK Stack
+
+**Databases:** Neo4j • Vector DBs
+
+**Cloud & DevOps:** Azure • AWS • Docker • Kubernetes • MLFlow
+
+**Programming:** Python • C/C++ • Linux System Programming
