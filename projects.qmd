@@ -15,9 +15,9 @@ An open-core scanner for the [Model Context Protocol](https://modelcontextprotoc
 
 [Read the write-up](posts/mcp-attack-surface/index.qmd) · [GitHub](https://github.com/tell2jyoti/provenire)
 
-## FDCPA-compliant voice AI collections agent
+## Low-latency real-time voice AI agent
 
-A production, real-time voice AI agent for a US bank's debt-collection workflow, built on a six-layer LLM-native stack (telephony → speech-to-text → LLM → text-to-speech → guardrails), tuned to sub-second response latency with FDCPA compliance enforced by policy guardrails. Covered regression suites, latency reviews, and a full agentic-workflow design. *(Client details omitted.)*
+A production, real-time voice AI agent built on a six-layer LLM-native stack (telephony → speech-to-text → LLM → text-to-speech → guardrails), tuned to sub-second response latency with safety enforced by policy guardrails. Covered regression suites, latency reviews, and a full agentic-workflow design. *(Client details omitted.)*
 
 *Stack: LiveKit · Deepgram Nova-3 · GPT-class LLM · ElevenLabs · NeMo Guardrails.*
 

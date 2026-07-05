@@ -15,12 +15,11 @@ I'm **Jyoti Ranjan** — a GenAI architect with 19+ years spanning enterprise de
 
 My current work sits at the intersection of **agentic AI and security**. As enterprises move AI agents into production, two questions get sharp fast: *can this agent be trusted to act on our behalf,* and *can we prove to an auditor that we checked?* Most of the industry is answering the first with scanners. I'm interested in the harder second half — turning a security finding into compliance-grade evidence — which is what I'm building toward with **Provenire**, an open-core MCP security and compliance-evidence tool.
 
-Alongside that, I design and ship production LLM systems: a low-latency, FDCPA-compliant **voice AI agent** for financial-services collections, retrieval and multi-agent architectures, and Document AI pipelines — including work on low-resource languages that most models ignore.
+Alongside that, I design and ship production LLM systems: a low-latency **voice AI agent**, retrieval and multi-agent architectures, and Document AI pipelines — including work on low-resource languages that most models ignore.
 
 ## Background
 
 - **US patent holder** and **arXiv co-author**, with roots in low-resource-language AI (Odia OCR) and an IIT research track.
-- **AWS Certified Generative AI Developer – Professional**; pursuing NVIDIA's Agentic AI Professional certification.
 - A picks-and-shovels bias: I'd rather build the infrastructure other people depend on than the thing on top.
 
 ## Core expertise
