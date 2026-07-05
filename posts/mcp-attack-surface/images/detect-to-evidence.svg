@@ -1,0 +1,78 @@
+<svg viewBox="0 0 860 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>
+    .ink { fill:#1f2933; }
+    .muted { fill:#67727e; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+    .h { font-size:15px; font-weight:700; }
+    .sm { font-size:12px; }
+    .tiny { font-size:11px; }
+    .step { font-size:12.5px; font-weight:600; }
+  </style>
+
+  <rect x="0.75" y="0.75" width="858.5" height="358.5" rx="12" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5"/>
+
+  <text x="28" y="38" class="ink h">Detection never learns the regulation's name</text>
+  <text x="28" y="58" class="muted sm">The engine emits a finding <tspan font-style="italic">type</tspan> and nothing more. Naming the control happens later, as data — never as code.</text>
+
+  <!-- OPEN CORE band -->
+  <rect x="28" y="82" width="470" height="200" rx="10" fill="#eaf2f8" stroke="#2f6f9f" stroke-width="1.5"/>
+  <text x="44" y="106" class="ink h">Engine · open core</text>
+  <rect x="330" y="92" width="152" height="20" rx="10" fill="#2f6f9f"/>
+  <text x="406" y="106" text-anchor="middle" fill="#ffffff" class="tiny" font-weight="700">Apache-2.0 · CLI</text>
+
+  <!-- steps -->
+  <g>
+    <rect x="44" y="126" width="128" height="42" rx="8" fill="#ffffff" stroke="#bcd4e6"/>
+    <text x="108" y="152" text-anchor="middle" class="ink step">connect · enumerate</text>
+
+    <rect x="186" y="126" width="128" height="42" rx="8" fill="#ffffff" stroke="#bcd4e6"/>
+    <text x="250" y="152" text-anchor="middle" class="ink step">detect</text>
+
+    <rect x="328" y="126" width="70" height="42" rx="8" fill="#ffffff" stroke="#bcd4e6"/>
+    <text x="363" y="152" text-anchor="middle" class="ink step">score</text>
+
+    <rect x="412" y="126" width="70" height="42" rx="8" fill="#ffffff" stroke="#bcd4e6"/>
+    <text x="447" y="152" text-anchor="middle" class="ink step">report</text>
+
+    <line x1="172" y1="147" x2="184" y2="147" stroke="#2f6f9f" stroke-width="2" marker-end="url(#b)"/>
+    <line x1="314" y1="147" x2="326" y2="147" stroke="#2f6f9f" stroke-width="2" marker-end="url(#b)"/>
+    <line x1="398" y1="147" x2="410" y2="147" stroke="#2f6f9f" stroke-width="2" marker-end="url(#b)"/>
+  </g>
+
+  <rect x="44" y="184" width="438" height="80" rx="8" fill="#ffffff" stroke="#bcd4e6"/>
+  <text x="60" y="206" class="ink sm" font-weight="700">Output: framework-neutral findings</text>
+  <text x="60" y="228" class="mono tiny ink">{ finding_type: "tool.exfiltration", severity: "critical", … }</text>
+  <text x="60" y="250" class="muted tiny">No mention of SOC 2, HIPAA, PCI. The engine does not know they exist.</text>
+
+  <!-- handoff arrow -->
+  <line x1="498" y1="182" x2="560" y2="182" stroke="#67727e" stroke-width="2" marker-end="url(#g)"/>
+  <text x="529" y="172" text-anchor="middle" class="muted tiny">hands off</text>
+
+  <!-- CONTROL PLANE band -->
+  <rect x="562" y="82" width="270" height="200" rx="10" fill="#e9f4ee" stroke="#3a8a5f" stroke-width="1.5"/>
+  <text x="578" y="106" class="ink h">Control plane</text>
+  <rect x="726" y="92" width="90" height="20" rx="10" fill="#3a8a5f"/>
+  <text x="771" y="106" text-anchor="middle" fill="#ffffff" class="tiny" font-weight="700">proprietary</text>
+
+  <rect x="578" y="126" width="238" height="52" rx="8" fill="#ffffff" stroke="#bfe0cd"/>
+  <text x="594" y="148" class="ink step">map</text>
+  <text x="594" y="166" class="mono tiny muted">packs/*.yaml — data, not code</text>
+
+  <line x1="697" y1="184" x2="697" y2="196" stroke="#3a8a5f" stroke-width="2" marker-end="url(#gd)"/>
+
+  <rect x="578" y="200" width="238" height="64" rx="8" fill="#ffffff" stroke="#bfe0cd"/>
+  <text x="594" y="222" class="ink step">evidence</text>
+  <text x="594" y="240" class="mono tiny muted">deterministic, signed,</text>
+  <text x="594" y="255" class="mono tiny muted">reproducible record</text>
+
+  <!-- bottom strip -->
+  <rect x="28" y="300" width="804" height="42" rx="8" fill="#f6f8fa" stroke="#e3e8ee"/>
+  <text x="430" y="318" text-anchor="middle" class="ink sm">Adding HIPAA is a new <tspan class="mono" font-weight="700">pack file</tspan>, never an engine change.</text>
+  <text x="430" y="335" text-anchor="middle" class="muted tiny">Evidence, not certification: it proves you checked — it does not declare you compliant.</text>
+
+  <defs>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2f6f9f"/></marker>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#67727e"/></marker>
+    <marker id="gd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#3a8a5f"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,85 @@
+<svg viewBox="0 0 860 380" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>
+    .card { fill:#ffffff; stroke:#e3e8ee; stroke-width:1.5; }
+    .ink { fill:#1f2933; }
+    .muted { fill:#67727e; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+    .lbl { font-size:13px; }
+    .h { font-size:15px; font-weight:700; }
+    .sm { font-size:12px; }
+    .tiny { font-size:11px; }
+  </style>
+
+  <!-- background card -->
+  <rect x="0.75" y="0.75" width="858.5" height="378.5" rx="12" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="28" y="38" class="ink h">Where the attacker's ink actually enters</text>
+  <text x="28" y="58" class="muted sm">The agent reads a server's tool metadata as text — and text in the model's context is treated as instructions.</text>
+
+  <!-- MCP SERVER (attacker-controlled) -->
+  <rect x="28" y="90" width="230" height="228" rx="10" fill="#fbecec" stroke="#d64545" stroke-width="1.5"/>
+  <text x="44" y="116" class="ink h">MCP server</text>
+  <rect x="150" y="102" width="94" height="20" rx="10" fill="#d64545"/>
+  <text x="197" y="116" text-anchor="middle" fill="#ffffff" class="tiny" font-weight="700">controlled by author</text>
+
+  <text x="44" y="146" class="muted sm">advertises, as plain text:</text>
+  <g class="mono sm ink">
+    <rect x="44" y="158" width="198" height="26" rx="6" fill="#ffffff" stroke="#e7c9c9"/>
+    <text x="56" y="175">tool.name</text>
+    <rect x="44" y="190" width="198" height="26" rx="6" fill="#ffffff" stroke="#e7c9c9"/>
+    <text x="56" y="207">tool.description</text>
+    <rect x="44" y="222" width="198" height="26" rx="6" fill="#ffffff" stroke="#e7c9c9"/>
+    <text x="56" y="239">tool.inputSchema</text>
+    <rect x="44" y="254" width="198" height="26" rx="6" fill="#ffffff" stroke="#e7c9c9"/>
+    <text x="56" y="271">prompts / resources</text>
+  </g>
+  <text x="44" y="300" class="muted tiny">MCP assumes this is benign.</text>
+
+  <!-- arrow 1 -->
+  <line x1="262" y1="204" x2="326" y2="204" stroke="#d64545" stroke-width="2" marker-end="url(#redarrow)"/>
+  <text x="294" y="194" text-anchor="middle" class="muted tiny">reads</text>
+
+  <!-- MODEL CONTEXT -->
+  <rect x="330" y="112" width="212" height="184" rx="10" fill="#eaf2f8" stroke="#2f6f9f" stroke-width="1.5"/>
+  <text x="346" y="138" class="ink h">Model context</text>
+  <text x="346" y="158" class="muted sm">system prompt</text>
+  <text x="346" y="178" class="muted sm">user message</text>
+  <rect x="346" y="190" width="180" height="46" rx="6" fill="#fbecec" stroke="#d64545" stroke-dasharray="4 3"/>
+  <text x="356" y="208" class="ink sm" font-weight="700">tool descriptions</text>
+  <text x="356" y="226" class="mono tiny" fill="#a83232">← the server's text, now in-context</text>
+  <text x="346" y="262" class="muted tiny">The model can't tell "documentation"</text>
+  <text x="346" y="278" class="muted tiny">from "instruction." It's all just tokens.</text>
+
+  <!-- arrow 2 -->
+  <line x1="546" y1="204" x2="610" y2="204" stroke="#2f6f9f" stroke-width="2" marker-end="url(#bluearrow)"/>
+  <text x="578" y="194" text-anchor="middle" class="muted tiny">acts on</text>
+
+  <!-- MODEL ACTS -->
+  <rect x="614" y="112" width="218" height="184" rx="10" fill="#ffffff" stroke="#c9ccd1" stroke-width="1.5"/>
+  <text x="630" y="138" class="ink h">The agent acts</text>
+  <g class="sm ink">
+    <rect x="630" y="152" width="186" height="30" rx="6" fill="#f6f8fa" stroke="#e3e8ee"/>
+    <text x="642" y="171">read / write files</text>
+    <rect x="630" y="188" width="186" height="30" rx="6" fill="#f6f8fa" stroke="#e3e8ee"/>
+    <text x="642" y="207">call external APIs</text>
+    <rect x="630" y="224" width="186" height="30" rx="6" fill="#f6f8fa" stroke="#e3e8ee"/>
+    <text x="642" y="243">run shell / queries</text>
+  </g>
+  <text x="630" y="278" class="muted tiny">…on your credentials and your data.</text>
+
+  <!-- bottom caption strip -->
+  <rect x="28" y="336" width="804" height="30" rx="8" fill="#f6f8fa" stroke="#e3e8ee"/>
+  <text x="430" y="356" text-anchor="middle" class="ink sm">
+    The trusted input and the attacker-controlled input arrive on the <tspan font-weight="700">same channel</tspan>. That is the whole problem.
+  </text>
+
+  <defs>
+    <marker id="redarrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#d64545"/>
+    </marker>
+    <marker id="bluearrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#2f6f9f"/>
+    </marker>
+  </defs>
+</svg>
