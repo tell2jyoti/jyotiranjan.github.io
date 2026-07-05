@@ -1,13 +1,15 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
+      "/posts/mcp-attack-surface/index.html",
       "/posts/gpt2-parameters/index.html"
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/mcp-attack-surface/index.html",
       "/posts/gpt2-parameters/index.html"
     ]
   }

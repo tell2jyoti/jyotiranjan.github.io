@@ -1,8 +1,19 @@
 project:
   type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "posts/**/*.qmd"
 
 website:
   title: "Jyoti Ranjan"
+  site-url: "https://jyotiranjan.dev"
+  description: "Jyoti Ranjan — GenAI architect building production AI systems and the security & evidence layer they need to be trusted. Writing on MCP/agent security, applied LLMs, and voice AI."
+  favicon: images/favicon.png
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
+  image: images/og-default.png
   navbar:
     left:
       - href: index.qmd
@@ -24,10 +35,8 @@ website:
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: [cosmo, theme-light.scss, brand.scss]
+      dark:  [darkly, theme-dark.scss, brand.scss]
     toc: false
-    css: styles.css
-    mainfont: "system-ui, -apple-system, sans-serif"
     page-layout: article
     max-width: 900px

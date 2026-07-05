@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+// Warm editorial — LIGHT (ivory paper, pine-green accent)
+$body-bg:      #F7F4ED;
+$body-color:   #2A2420;
+$link-color:   #35685A;
+$primary:      #35685A;
+$border-color: #E0D8C8;
+
+/*-- scss:rules --*/
+:root {
+  --paper:    #F7F4ED;
+  --ink:      #2A2420;
+  --muted:    #6E655A;
+  --accent:   #35685A;   /* muted pine green */
+  --accent-2: #B5762F;   /* ochre — sparing highlight */
+  --line:     #E0D8C8;
+  --card:     #FCFAF5;
+  --code-bg:  #F0EBE0;
+}
