@@ -1,37 +1,33 @@
 ---
 title: "About"
+description: "Jyoti Ranjan — GenAI architect with 19+ years in production software and applied AI. Focused on agentic AI, MCP/agent security, and enterprise LLM systems."
 ---
 
-::: {style="text-align: center; margin-top: 2rem; margin-bottom: 3rem;"}
-![](images/profile.jpg){width=180 style="border-radius: 50%; border: 3px solid #e0e0e0;"}
+::: {style="text-align: center; margin-top: 1rem; margin-bottom: 2.5rem;"}
+![](images/profile.jpg){width=170 style="border-radius: 50%; border: 3px solid var(--line); box-shadow: 0 6px 20px rgba(0,0,0,.1);" fig-alt="Jyoti Ranjan"}
 :::
 
-# About Me
+# About
 
-I'm **Jyoti Ranjan**, a GenAI architect specializing in enterprise-grade AI systems, LLM fine-tuning, vLLM inference optimization, and Document AI. I focus on building production systems that are fast, reliable, and scalable.
+I'm **Jyoti Ranjan** — a GenAI architect with 19+ years spanning enterprise development, solution architecture, and production AI systems. I build things that have to work in the real world: under latency budgets, under compliance regimes, and under the scrutiny of people whose job is to say no.
 
-## Core Expertise
-- LLM fine-tuning (SFT, RLHF, DPO)
-- vLLM inference engineering
-- OCR + Document AI (Donut, TrOCR)
-- Multi-agent systems (Autogen, CrewAI)
-- RAG + GraphRAG architectures
-- Azure OpenAI, AWS Bedrock/SageMaker
+## What I'm focused on now
 
-## Tech Stack
+My current work sits at the intersection of **agentic AI and security**. As enterprises move AI agents into production, two questions get sharp fast: *can this agent be trusted to act on our behalf,* and *can we prove to an auditor that we checked?* Most of the industry is answering the first with scanners. I'm interested in the harder second half — turning a security finding into compliance-grade evidence — which is what I'm building toward with **Provenire**, an open-core MCP security and compliance-evidence tool.
 
-**AI/ML Frameworks:** PyTorch • TensorFlow • Deep Learning • NLP • Computer Vision
+Alongside that, I design and ship production LLM systems: a low-latency **voice AI agent**, retrieval and multi-agent architectures, and Document AI pipelines — including work on low-resource languages that most models ignore.
 
-**GenAI & LLMs:** LangChain • RAG • GraphRAG • LLM Fine-tuning • RLHF/DPO • vLLM • Azure OpenAI • AWS Bedrock
+## Background
 
-**Document AI:** Donut • TrOCR • OCR Pipelines
+- **US patent holder** and **arXiv co-author**, with roots in low-resource-language AI (Odia OCR) and an IIT research track.
+- A picks-and-shovels bias: I'd rather build the infrastructure other people depend on than the thing on top.
 
-**Multi-Agent:** Autogen • CrewAI • Agentic Frameworks
+## Core expertise
 
-**Big Data:** Hadoop • Spark • Kafka • HBase • ELK Stack
+**Agentic & LLM systems** — multi-agent orchestration (LangGraph, CrewAI, Autogen), RAG / GraphRAG, LLM fine-tuning (SFT, RLHF, DPO), vLLM inference, guardrails (NeMo).
 
-**Databases:** Neo4j • Vector DBs
+**AI security & compliance** — MCP/agent attack-surface analysis, framework-neutral finding→control mapping, evidence generation.
 
-**Cloud & DevOps:** Azure • AWS • Docker • Kubernetes • MLFlow
+**Voice & Document AI** — real-time voice agents (LiveKit · Deepgram · ElevenLabs), OCR and layout-aware extraction (Donut, TrOCR, Qwen2.5-VL).
 
-**Programming:** Python • C/C++ • Linux System Programming
+**Platform** — Python · Azure OpenAI · AWS Bedrock/SageMaker · Docker · Kubernetes · Neo4j & vector DBs · MLflow.

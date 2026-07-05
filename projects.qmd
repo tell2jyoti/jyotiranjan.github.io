@@ -1,19 +1,32 @@
 ---
 title: "Projects"
+description: "Selected work — MCP security, production voice AI, and low-resource-language Document AI."
 ---
 
 # Projects
 
-Below are placeholder projects representing my typical work. Full details coming soon.
+A few things I've built. Client engagements are described without identifying details.
 
-## Project Atlas
-A scalable RAG pipeline with vLLM-powered inference.
+## Provenire — MCP security → compliance evidence
 
-## Project Nebula
-GraphRAG prototype using Neo4j + LLM retrieval & reasoning.
+An open-core scanner for the [Model Context Protocol](https://modelcontextprotocol.io) attack surface. It connects to an MCP server, detects security weaknesses in the tools it exposes (prompt-injection directives, invisible-character smuggling, exfiltration affordances, over-privilege, unbounded schemas), scores them, and — the part nobody else does — maps those findings to named compliance controls and emits a deterministic, signed evidence record. Built strictly test-first; the engine and CLI are Apache-2.0.
 
-## Project Helix
-OCR + layout-aware Document AI extraction pipeline.
+*Architecture: framework-neutral detection engine + regulation packs as data + evidence bundle. "Detection ≠ mapping."*
 
-## Project Polaris
-Multi-agent orchestration using Autogen/CrewAI for structured workflows.
+[Read the write-up](posts/mcp-attack-surface/index.qmd) · [GitHub](https://github.com/tell2jyoti/provenire)
+
+## Low-latency real-time voice AI agent
+
+A production, real-time voice AI agent built on a six-layer LLM-native stack (telephony → speech-to-text → LLM → text-to-speech → guardrails), tuned to sub-second response latency with safety enforced by policy guardrails. Covered regression suites, latency reviews, and a full agentic-workflow design. *(Client details omitted.)*
+
+*Stack: LiveKit · Deepgram Nova-3 · GPT-class LLM · ElevenLabs · NeMo Guardrails.*
+
+## Odia OCR & low-resource-language Document AI
+
+A document-understanding pipeline for **Odia**, a language most OCR and OCR-LLM systems handle poorly — chaining modern OCR and vision-language models over curated Odia datasets, with an interactive breakdown of the model internals (a from-scratch decoder and a tokenizer built for Odia conjunct consonants). A portfolio project about making capable AI work for languages the mainstream ignores.
+
+*Stack: DeepSeek-OCR → olmOCR → Qwen2.5-VL; RunPod serverless; Hugging Face Spaces demo.*
+
+---
+
+More on the [blog](blog.qmd), and code on [GitHub](https://github.com/tell2jyoti).

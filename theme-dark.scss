@@ -1,0 +1,19 @@
+/*-- scss:defaults --*/
+// Warm editorial — DARK (warm near-black, lightened pine accent)
+$body-bg:      #1A1714;
+$body-color:   #E9E2D6;
+$link-color:   #7CB6A2;
+$primary:      #7CB6A2;
+$border-color: #322C25;
+
+/*-- scss:rules --*/
+:root {
+  --paper:    #1A1714;
+  --ink:      #E9E2D6;
+  --muted:    #9A9083;
+  --accent:   #7CB6A2;   /* lightened pine */
+  --accent-2: #D9A458;   /* warm gold highlight */
+  --line:     #322C25;
+  --card:     #211D19;
+  --code-bg:  #221E19;
+}

@@ -1,32 +1,40 @@
 ---
-title: "Jyoti Ranjan"
+title: ""
+pagetitle: "Jyoti Ranjan — GenAI Architect & Applied LLM Systems"
+description: "GenAI architect building production AI systems and the security & evidence layer they need to be trusted."
+image: images/og-default.png
+open-graph:
+  title: "Jyoti Ranjan — GenAI Architect & Applied LLM Systems"
+twitter-card:
+  title: "Jyoti Ranjan — GenAI Architect & Applied LLM Systems"
 listing:
   contents: posts
   sort: "date desc"
   type: default
   max-items: 10
-  categories: true
+  categories: false
+  fields: [title, description, date, categories]
 page-layout: full
 ---
 
 ::: {.column-page}
 
-::: {style="display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem;"}
-::: {style="flex-shrink: 0;"}
-![](images/profile.jpg){width=150 style="border-radius: 50%; border: 3px solid #e0e0e0;"}
-:::
+```{=html}
+<div class="hero">
+  <img src="images/profile.jpg" class="hero-photo" alt="Jyoti Ranjan">
+  <div class="hero-text">
+    <div class="hero-eyebrow">GenAI Architect · Applied LLM Systems</div>
+    <h1 class="hero-name">Jyoti Ranjan</h1>
+    <p class="hero-lead">I build production-grade AI systems — and, increasingly, the <strong>security and evidence layer</strong> they need before anyone can trust them in a regulated setting. Nineteen years in the field, a US patent, and an arXiv paper along the way.</p>
+    <div class="hero-links">
+      <a href="blog.html">Read the blog</a> · <a href="projects.html">Projects</a> · <a href="about.html">About</a> · <a href="https://github.com/tell2jyoti">GitHub</a>
+    </div>
+  </div>
+</div>
+```
 
-::: {style="flex-grow: 1;"}
-## GenAI Architect & Enterprise AI Consultant
+Lately I've been working at the intersection of **agentic AI and security** — how autonomous agents can be deployed safely, and how you prove to an auditor that they are. That work shows up here as writing, open-source, and the occasional deep-dive.
 
-I design and deploy production-grade RAG, GraphRAG, LLM fine-tuning pipelines, vLLM inference systems, and OCR-driven Document AI workflows for enterprise use cases.
-
-**Focus areas:** LLM fine-tuning • vLLM inference • Document AI • Multi-agent systems • RAG/GraphRAG
-
-[About](about.qmd) • [Projects](projects.qmd) • [Contact](contact.qmd)
-:::
-:::
-
-## Recent Posts
+## Writing
 
 :::
