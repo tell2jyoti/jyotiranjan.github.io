@@ -3,7 +3,7 @@ title: "Your MCP Server Is an Attack Surface"
 subtitle: "Six ways a Model Context Protocol server can quietly betray your agent — and why finding the problems isn't the same as proving you looked."
 description: "MCP let us give AI agents hands. It also gave attackers a new, under-audited surface: the tool descriptions and schemas an agent reads before it acts. Here are the six weaknesses that matter — and the gap between spotting them and proving to an auditor that you did."
 author: "Jyoti Ranjan"
-date: "2026-07-05"
+date: "2026-07-04"
 categories: [MCP, AI security, agents, compliance]
 # image: cover.png
 draft: false
